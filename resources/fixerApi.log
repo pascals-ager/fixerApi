@@ -1,0 +1,59 @@
+INFO:root:Received slurp command with (('start_date', '2019-02-01'), ('end_date', '2019-03-01'), ('base', 'EUR'))
+INFO:root:Received slurp command with (('start_date', '2019-02-01'), ('end_date', '2019-03-01'), ('base', 'EUR'))
+ERROR:root:This
+INFO:root:Received seed command
+INFO:root:Dropping Table if it exists HISTORICAL_CURRENCY_RATES
+ERROR:root:Database error: unable to open database file
+INFO:root:Creating Table HISTORICAL_CURRENCY_RATES with CREATE TABLE HISTORICAL_CURRENCY_RATES (base_code TEXT, date DATE, rate REAL, currency_code TEXT)
+ERROR:root:Database error: unable to open database file
+INFO:root:Received seed command
+INFO:root:Dropping Table if it exists HISTORICAL_CURRENCY_RATES
+INFO:root:Connecting to sqlite:////home/py/sqlite/currencyRates.db
+ERROR:root:Database error: unable to open database file
+INFO:root:Creating Table HISTORICAL_CURRENCY_RATES with CREATE TABLE HISTORICAL_CURRENCY_RATES (base_code TEXT, date DATE, rate REAL, currency_code TEXT)
+INFO:root:Connecting to sqlite:////home/py/sqlite/currencyRates.db
+ERROR:root:Database error: unable to open database file
+INFO:root:Received seed command
+INFO:root:Dropping Table if it exists HISTORICAL_CURRENCY_RATES
+INFO:root:Connecting to sqlite:////home/py/sqlite/currencyRates.db
+ERROR:root:Database error: unable to open database file
+INFO:root:Creating Table HISTORICAL_CURRENCY_RATES with CREATE TABLE HISTORICAL_CURRENCY_RATES (base_code TEXT, date DATE, rate REAL, currency_code TEXT)
+INFO:root:Connecting to sqlite:////home/py/sqlite/currencyRates.db
+ERROR:root:Database error: unable to open database file
+INFO:root:Received seed command
+INFO:root:Dropping Table if it exists HISTORICAL_CURRENCY_RATES
+INFO:root:Connecting to /home/py/sqlite/currencyRates.db
+INFO:root:Creating Table HISTORICAL_CURRENCY_RATES with CREATE TABLE HISTORICAL_CURRENCY_RATES (base_code TEXT, date DATE, rate REAL, currency_code TEXT)
+INFO:root:Connecting to /home/py/sqlite/currencyRates.db
+INFO:root:Received seed command
+INFO:root:Dropping Table if it exists HISTORICAL_CURRENCY_RATES
+INFO:root:Connecting to /home/py/sqlite/currencyRates.db
+INFO:root:Creating Table HISTORICAL_CURRENCY_RATES with CREATE TABLE HISTORICAL_CURRENCY_RATES (base_code TEXT, date DATE, rate REAL, currency_code TEXT)
+INFO:root:Connecting to /home/py/sqlite/currencyRates.db
+INFO:root:Received slurp command with (('start_date', '2019-02-01'), ('end_date', '2019-03-01'), ('base', 'EUR'))
+INFO:root:Making get requests on /timeseries using (('start_date', '2019-02-01'), ('end_date', '2019-03-01'), ('base', 'EUR'))
+INFO:root:Received slurp command with (('start_date', '2019-02-01'), ('end_date', '2019-03-01'), ('base', 'EUR'))
+INFO:root:Making get requests on /timeseries using (('start_date', '2019-02-01'), ('end_date', '2019-03-01'), ('base', 'EUR'))
+INFO:root:persisting response from https://data.fixer.io/api/timeseries?access_key=614032009e8c328ad4bfe88fd48246c7&start_date=2019-02-01&end_date=2019-03-01&base=EUR
+INFO:root:Connecting to /home/py/sqlite/currencyRates.db
+ERROR:root:Database error: Error binding parameter 0 - probably unsupported type.
+INFO:root:Received slurp command with (('start_date', '2019-02-01'), ('end_date', '2019-03-01'), ('base', 'EUR'))
+INFO:root:Making get requests on /timeseries using (('start_date', '2019-02-01'), ('end_date', '2019-03-01'), ('base', 'EUR'))
+INFO:root:persisting response from https://data.fixer.io/api/timeseries?access_key=614032009e8c328ad4bfe88fd48246c7&start_date=2019-02-01&end_date=2019-03-01&base=EUR
+INFO:root:Connecting to /home/py/sqlite/currencyRates.db
+INFO:root:Received query command with (('start_date', '2019-02-01'), ('end_date', '2019-03-01'), ('base', 'EUR'), ('currency_code', 'USD'))
+INFO:root:fetching results for SELECT base_code, currency_code, AVG(rate) FROM HISTORICAL_CURRENCY_RATES where base_code = :1
+            AND currency_code = :2 AND date > :3 AND date < :4 GROUP BY base_code, currency_code with params ('EUR', 'USD', datetime.date(2019, 2, 1), datetime.date(2019, 3, 1))
+INFO:root:Connecting to /home/py/sqlite/currencyRates.db
+INFO:root:Received query command with (('start_date', '2019-02-01'), ('end_date', '2019-03-01'), ('base', 'EUR'), ('currency_code', 'USD'))
+INFO:root:fetching results for SELECT base_code, currency_code, AVG(rate) FROM HISTORICAL_CURRENCY_RATES where base_code = :1
+            AND currency_code = :2 AND date > :3 AND date < :4 GROUP BY base_code, currency_code with params ('EUR', 'USD', datetime.date(2019, 2, 1), datetime.date(2019, 3, 1))
+INFO:root:Connecting to /home/py/sqlite/currencyRates.db
+INFO:root:Received query command with (('start_date', '2019-02-01'), ('end_date', '2019-03-01'), ('base', 'EUR'), ('currency_code', 'USD'))
+INFO:root:fetching results for SELECT base_code, currency_code, AVG(rate) FROM HISTORICAL_CURRENCY_RATES where base_code = :1
+            AND currency_code = :2 AND date > :3 AND date < :4 GROUP BY base_code, currency_code with params ('EUR', 'USD', datetime.date(2019, 2, 1), datetime.date(2019, 3, 1))
+INFO:root:Connecting to /home/py/sqlite/currencyRates.db
+INFO:root:Received query command with (('start_date', '2019-02-01'), ('end_date', '2019-03-01'), ('base', 'EUR'), ('currency_code', 'USD'))
+INFO:root:fetching results for SELECT base_code, currency_code, AVG(rate) FROM HISTORICAL_CURRENCY_RATES where base_code = :1
+            AND currency_code = :2 AND date > :3 AND date < :4 GROUP BY base_code, currency_code with params ('EUR', 'USD', datetime.date(2019, 2, 1), datetime.date(2019, 3, 1))
+INFO:root:Connecting to /home/py/sqlite/currencyRates.db
