@@ -13,6 +13,7 @@ def main(args):
         log.info("Received {} command with {}".format(args.command, params))
         response = service.get_timeseries_data(params)
         service.persist_response(response)
+        print("Data slurped and persisted into the table")
     elif args.command == 'query':
         base_code = args.base_code.upper()
         currency_code = args.currency_code.upper()
@@ -28,6 +29,7 @@ def main(args):
     elif args.command == 'seed':
         log.info("Received {} command".format(args.command))
         service.seed_database()
+        print("Successfully seeded the database currencyRates.db")
 
 
 if __name__ == "__main__":

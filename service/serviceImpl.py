@@ -27,7 +27,9 @@ class ServiceImpl:
     def get_timeseries_data(self, parameters):
         resource_path = 'timeseries'
         self.logger.info("Making get requests on /{} using {}".format(resource_path, parameters))
-        return self.source.call_api(resource_path=resource_path, method='GET', query_params=parameters)
+        res = self.source.call_api(resource_path=resource_path, method='GET', query_params=parameters)
+        self.logger.info("Successfully retrieved the response for {}".format(parameters))
+        return res
 
     def persist_response(self, response):
         self.logger.info("persisting response from {}".format(response.url))
@@ -35,6 +37,7 @@ class ServiceImpl:
         insert_stmt = "INSERT INTO {}(base_code , date , rate , currency_code) VALUES (:1, :2, :3, :4)".format(
             self.table)
         self.destination.persist(response=response_json, statement=insert_stmt)
+        self.logger.info("Successfully persisted the response into {}".format(self.table))
 
     def get_average_rate(self, base_code, currency_code, start_date, end_date):
         query = """SELECT base_code, currency_code, AVG(rate) FROM {} where base_code = :1

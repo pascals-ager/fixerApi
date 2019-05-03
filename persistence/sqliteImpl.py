@@ -21,8 +21,10 @@ class SqliteImpl:
             conn.execute(statement)
         except sqlite3.Error as e:
             self.logger.error("Database error: {}".format(e))
+            raise e
         except Exception as e:
             self.logger.error("Exception in query: {}".format(e))
+            raise e
         finally:
             if conn:
                 conn.close()
@@ -41,8 +43,10 @@ class SqliteImpl:
                 cur.execute('COMMIT')
         except sqlite3.Error as e:
             self.logger.error("Database error: {}".format(e))
+            raise e
         except Exception as e:
             self.logger.error("Exception in query: {}".format(e))
+            raise e
         finally:
             if conn:
                 conn.close()
@@ -56,8 +60,10 @@ class SqliteImpl:
             results = conn.execute(statement, params).fetchall()
         except sqlite3.Error as e:
             self.logger.error("Database error: {}".format(e))
+            raise e
         except Exception as e:
             self.logger.error("Exception in query: {}".format(e))
+            raise e
         finally:
             if conn:
                 conn.close()
