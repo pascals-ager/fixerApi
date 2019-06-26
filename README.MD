@@ -35,5 +35,3 @@ What is missing:
 4. Chunk based persistence not available
 5. Configs management
 6. Use abc meta to create/enforce an interface for the database service
-
-Given more time I would address the above in the mentioned order.
