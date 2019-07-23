@@ -1,5 +1,3 @@
-##T1:
-
 Recreate miniconda environment from env.yml file
 create sqlite3 database 'currencyRates.db' at $HOME/sqlite
 Add the api key (use professsional account to get access to the /timeseries resource for date range queries) into ApiConfiguration(configuration.py)
@@ -26,9 +24,7 @@ python fixerApi.py query --base_code EUR --currency_code USD --start_date 2019-0
 ```
 **Logs are available at resources/fixerApi.log
 
-Disclaimer: The task is not complete because of a lack of time.
-
-What is missing:
+TODO
 1. Test Cases missing
 2. Sanitized inputs (dates can be tricky and need careful sanitization)
 3. For large date ranges, there is no parallel request implementation
